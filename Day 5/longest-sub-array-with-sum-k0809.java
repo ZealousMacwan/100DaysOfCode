@@ -23,6 +23,9 @@ class Solution{
                 int currentLength = i - lengthOfPrevious;
                 maxLength = Math.max(maxLength, currentLength);
             }
+            // here we want the shortest (prefixSum - K) so that our actual
+            // subarray would be the longest
+            // hence we do not update the index if we already have prefixSum (else condition)
             if(!prefixSumMap.containsKey(prefixSum)){
                 prefixSumMap.put(prefixSum,i);
             }
