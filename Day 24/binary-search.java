@@ -15,5 +15,26 @@ class Solution {
             }
         }
         return -1;
+
+        // recursive
+        //return bs(nums, target, 0, nums.length-1);
+
     }
+
+    // recursive
+    /*
+    public int bs(int[] nums, int target, int left, int right){
+        if(left <= right){
+            int mid = (left+right)/2;
+            if(nums[mid] == target)
+                return mid;
+            else if(nums[mid] > target)
+                return bs(nums, target, left, mid-1);
+            else
+                return bs(nums, target, mid+1, right);            
+        }
+        return -1;
+    }
+    */
+
 }
